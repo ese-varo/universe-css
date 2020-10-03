@@ -38,17 +38,19 @@ body {
 }
 
 .heading-primary {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
   backface-visibility: hidden;
+  color: rgb(218,169,0);
+  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .text-box {
-  color: rgb(218,169,0);
-  text-transform: uppercase;
+  position: relative;
+  left: 50%;
+  position: absolute;
   text-align: center;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .heading-primary-main {
@@ -79,4 +81,68 @@ body {
   0% { transform: translateX(80px); }
   80% { transform: translateX(-15px); }
   100% { transform: translateX(0); }
+}
+
+@keyframes moveInBottom {
+  0% { 
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  backface-visibility: hidden;
+  border-radius: 100px;
+  color: #555;
+  padding: 10px 60px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn-yellow {
+  background-color: rgb(218,169,0);
+}
+
+.btn:hover {
+  box-shadow: 0 10px 20px #002856;
+  transform: translateY(-3px);
+}
+.btn:active {
+  box-shadow: 0 10px 10px #002856;
+  transform: translateY(-1px);
+}
+
+.btn::after {
+  content: '';
+  height: 100%;
+  border-radius: 100px;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: all .4s;
+  left: 0;
+  z-index: -1;
+}
+
+.btn-yellow::after {
+  background-color: rgb(218,169,0);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.6) scaleY(2);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 1s ease-out .75s;
+  animation-fill-mode: backwards;
 }
