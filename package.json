@@ -1,0 +1,12 @@
+{
+  "name": "universe-css",
+  "version": "1.0.0",
+  "description": "Landing page for solar system planets",
+  "main": "index.js",
+  "repository": "git@github.com:ese-varo/universe-css.git",
+  "author": "Alvaro Padilla <varoboss.ap@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
