@@ -1,66 +1,3 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 84, 135, 0.4), rgba(0, 40, 86, 0.6)), url("../img/earth-hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 10% 100%, 0 90%);
-  position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  left: 4rem;
-  top: 4rem; }
-
-.header__logo {
-  height: 3rem; }
-
-.heading-primary {
-  backface-visibility: hidden;
-  color: #daa900;
-  margin-bottom: 5rem;
-  text-transform: uppercase; }
-
-.text-box {
-  position: relative;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  transform: translate(-50%, -50%); }
-
-.heading-primary--main {
-  display: block;
-  font-weight: 700;
-  font-size: 5rem;
-  letter-spacing: 3rem;
-  animation: moveInRight 1s ease-out 2s; }
-
-.heading-primary--sub {
-  display: block;
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: 1.7rem;
-  animation: moveInLeft 1s ease-out 2s; }
-
 @keyframes moveInRight {
   0% {
     transform: translateX(-8rem); }
@@ -85,8 +22,46 @@ body {
     transform: translateY(0);
     opacity: 1; } }
 
-.btn:link,
-.btn:visited {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  backface-visibility: hidden;
+  color: #d9a900;
+  margin-bottom: 5rem;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-weight: 700;
+    font-size: 5rem;
+    letter-spacing: 3rem;
+    animation: moveInRight 1s ease-out 2s; }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    animation: moveInLeft 1s ease-out 2s; }
+
+.btn:link, .btn:visited {
   backface-visibility: hidden;
   border-radius: 10rem;
   color: #777;
@@ -98,12 +73,12 @@ body {
   transition: all .2s;
   position: relative; }
 
-.btn--yellow {
-  background-color: #daa900; }
-
 .btn:hover {
   box-shadow: 0 1rem 2rem #002856;
   transform: translateY(-0.3rem); }
+  .btn:hover::after {
+    transform: scaleX(1.6) scaleY(2);
+    opacity: 0; }
 
 .btn:active {
   box-shadow: 0 1rem 1rem #002856;
@@ -121,13 +96,32 @@ body {
   left: 0;
   z-index: -1; }
 
-.btn--yellow::after {
-  background-color: #daa900; }
-
-.btn:hover::after {
-  transform: scaleX(1.6) scaleY(2);
-  opacity: 0; }
+.btn--yellow {
+  background-color: #d9a900; }
+  .btn--yellow::after {
+    background-color: #d9a900; }
 
 .btn--animated {
   animation: moveInBottom 1s ease-out .75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 84, 135, 0.4), rgba(0, 40, 86, 0.6)), url("../img/earth-hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 10% 100%, 0 90%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    left: 4rem;
+    top: 4rem; }
+  .header__logo {
+    height: 3rem; }
+  .header__text-box {
+    position: relative;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    transform: translate(-50%, -50%); }
