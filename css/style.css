@@ -172,6 +172,20 @@ body {
   box-shadow: 0 0.5rem 1rem rbga(#002856, 0.2);
   transform: translateY(0); }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -198,24 +212,6 @@ body {
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
-
-.feature-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 40, 86, 0.15);
-  transition: transform .3s; }
-  .feature-box__icon {
-    font-size: 6rem;
-    margin-bottom: 2rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #0091b3, #002856);
-    -webkit-background-clip: text;
-    color: transparent; }
-  .feature-box:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
   perspective: 150rem;
@@ -310,11 +306,29 @@ body {
     font-size: 6rem;
     font-weight: 300; }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 40, 86, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #0091b3, #002856);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
 .story {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -425,5 +439,5 @@ body {
   margin-top: -12rem; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 15rem 0; }
