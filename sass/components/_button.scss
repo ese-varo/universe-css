@@ -3,7 +3,6 @@
   &:visited {
     backface-visibility: hidden;
     border-radius: 10rem;
-    color: $color-gray-dark;
     font-size: $default-font-size;
     padding: 1rem 6rem;
     display: inline-block;
@@ -14,7 +13,7 @@
   }
 
   &:hover {
-    box-shadow: 0 1rem 2rem $color-primary-dark;
+    box-shadow: 0 1rem 2rem rgba($color-primary-dark, .5);
     transform: translateY(-.3rem);
     &::after {
       transform: scaleX(1.6) scaleY(2);
@@ -23,7 +22,7 @@
   }
 
   &:active {
-    box-shadow: 0 1rem 1rem $color-primary-dark;
+    box-shadow: 0 1rem 1rem rgba($color-primary-dark, .5);
     transform: translateY(-.1rem);
   }
 
@@ -42,8 +41,17 @@
 
   &--yellow {
     background-color: $color-yellow-dark;
+    color: $color-gray-dark;
     &::after {
       background-color: $color-yellow-dark;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary-light;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary-light;
     }
   }
 
