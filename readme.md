@@ -1,0 +1,1 @@
+This is a project for learning and practicing CSS and Sass. I developed it while taking the online course 'Advanced CSS and Sass'. The page design implemented is not of my authory, but from Jonas Schmedtmann, creator of the course.
